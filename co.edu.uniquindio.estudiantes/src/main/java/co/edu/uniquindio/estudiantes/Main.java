@@ -49,7 +49,7 @@ public class Main {
         System.out.println("La nota mayor de  " +estudiante1.getNombre() + " es: " + obtenerNotaMaximaEstudiante(estudiante1));
         System.out.println("La nota mayor de  " +estudiante2.getNombre() + " es: " + obtenerNotaMaximaEstudiante(estudiante2));
         System.out.println("La nota mayor de  " +estudiante3.getNombre() + " es: " + obtenerNotaMaximaEstudiante(estudiante3));
-        
+
     }
 
     public static void crearEstudiantes(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3) {
