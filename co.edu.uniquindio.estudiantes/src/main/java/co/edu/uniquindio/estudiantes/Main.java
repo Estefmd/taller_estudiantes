@@ -3,12 +3,22 @@ import co.edu.uniquindio.estudiantes.model.Estudiante;
 
 public class Main {
     public static void main(String[] args) {
+
         Estudiante estudiante1 = new Estudiante();
         Estudiante estudiante2 = new Estudiante();
         Estudiante estudiante3 = new Estudiante();
+
         crearEstudiantes(estudiante1, estudiante2, estudiante3);
 
         mostrarDefinitivaEstudiantes(estudiante1, estudiante2, estudiante3);
+
+        mostrarPromedioCurso(estudiante1,estudiante2,estudiante3);
+
+        System.out.println("El promedio de edad de los tres estudiantes es: " +calcularPromedioEdad(estudiante1,estudiante2,estudiante3));
+
+        System.out.println("El promedio de la nota 1 de los tres estudiantes es: " +calcularPromedioNota1(estudiante1,estudiante2,estudiante3));
+
+        
 
     }
     public static void crearEstudiantes(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
@@ -48,7 +58,6 @@ public class Main {
 
        return resultado;
     }
-
     private static void mostrarDefinitivaEstudiantes(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
 
         String mensaje = "La nota definitiva de "+estudiante1.getNombre()+ " es: "+calcularDefinitivaEstudiante(estudiante1)+"\n";
@@ -57,4 +66,40 @@ public class Main {
 
         System.out.println(mensaje);
     }
+    private static void mostrarPromedioCurso(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
+
+        double promedioEstudiante1 = calcularDefinitivaEstudiante(estudiante1);
+        double promedioEstudiante2 = calcularDefinitivaEstudiante(estudiante2);
+        double promedioEstudiante3 = calcularDefinitivaEstudiante(estudiante3);
+        int cantidadPromedioEstudiantes = 3;
+
+        double resultado = (promedioEstudiante1+promedioEstudiante2+promedioEstudiante3) / cantidadPromedioEstudiantes;
+
+        System.out.println("El promedio del Curso es: " +resultado);
+    }
+    private static int calcularPromedioEdad(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
+
+        int edadEstudiante1 = estudiante1.getEdad();
+        int edadEstudiante2 = estudiante2.getEdad();
+        int edadEstudiante3 = estudiante3.getEdad();
+        int cantidadEdades = 3;
+
+        int resultado = (edadEstudiante1+edadEstudiante2+edadEstudiante3) / cantidadEdades;
+
+        return resultado;
+    }
+    private static double calcularPromedioNota1(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3){
+
+        double nota1Estudiante1 = estudiante1.getNota1();
+        double nota1Estudiante2 = estudiante2.getNota1();
+        double nota1Estudiante3 = estudiante3.getNota1();
+        double numNotas = 3;
+
+        double resultado = (nota1Estudiante1+nota1Estudiante2+nota1Estudiante3) / numNotas;
+
+        return resultado;
+    }
+
+
 }
+
