@@ -53,6 +53,7 @@ public class Main {
     }
 
     public static void crearEstudiantes(Estudiante estudiante1, Estudiante estudiante2, Estudiante estudiante3) {
+
         estudiante1.setNombre("Juan");
         estudiante1.setEdad(17);
         estudiante1.setCorreo("juan@mail.com");
