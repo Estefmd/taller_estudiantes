@@ -26,10 +26,10 @@ public class Main {
         if (verificarAprobacionCurso(estudiante1)){
             System.out.println("El Estudiante " + estudiante1.getNombre() + " aprobo el curso");
         }
-        if (verificarAprobacionCurso(estudiante1)){
+        if (verificarAprobacionCurso(estudiante2)){
             System.out.println("El Estudiante " + estudiante2.getNombre() + " aprobo el curso");
         }
-        if (verificarAprobacionCurso(estudiante1)){
+        if (verificarAprobacionCurso(estudiante3)){
             System.out.println("El Estudiante " + estudiante3.getNombre() + " aprobo el curso");
         }
 
